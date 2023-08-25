@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.no-border {
+  border: none;
+  background: none;
+  border-width: 0px;
+  border-color: white;
+}
+#left-button-js {
+  border: none;
+}
+#button-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
