@@ -154,7 +154,8 @@ body {
   top: 5px;
   left: 15px;
 }
-/*
-.webgl {
-  display: none;
-}*/
+
+a {
+  color: white;
+  text-decoration: none;
+}

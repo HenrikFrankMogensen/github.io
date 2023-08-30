@@ -144,7 +144,7 @@ menu1.addEventListener('click', () => {
 
 menu2.addEventListener('click', () => {
     text1.style.display = 'none';
-    window.open('asteroids.html', 'blank');
+    window.open('kranie.html', 'blank');
     
 });
 

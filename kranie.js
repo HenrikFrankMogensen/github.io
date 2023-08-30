@@ -78,10 +78,6 @@ controls.update();
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.shadowMap.enabled = true;
-//renderer.gammaOutput = true;
-//Vector3 {x: 1.3597547280289248, y: -35.02021665523571, z: 18.215932101835655}
-//Vector3 {x: 1.4045954372735023, y: -33.46439964805403, z: 19.57527799925676}
-//Vector3 {x: 1.7028835647381233, y: -47.671246369649275, z: 22.715653196853335}
 
 function animate() {
   requestAnimationFrame(animate);
