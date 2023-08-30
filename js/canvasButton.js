@@ -54,9 +54,9 @@ class CanvasButton extends Game {
     this.ctx.lineTo(700, 490);
     this.ctx.lineTo(700, 530);
     this.ctx.fill();
-    this.ctx.moveTo(380, 490);
-    this.ctx.lineTo(360, 510);
-    this.ctx.lineTo(400, 510);
+    this.ctx.moveTo(390, 490);
+    this.ctx.lineTo(370, 510);
+    this.ctx.lineTo(410, 510);
     this.ctx.fill();
   }
   
