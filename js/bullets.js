@@ -32,6 +32,9 @@ class Bullets extends Game {
           // Asteroid hit
           //bangMedium.load();
           bangMedium.loadSound().then(() => {
+            if(audioContext.state === "suspended") {
+              audioContext.resume();
+            }
             bangMedium.play();
           });
           game.nScore += 100;

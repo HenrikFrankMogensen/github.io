@@ -18,7 +18,7 @@ class Game {
     this.afterBigSaucer = false;
   }
 
-  drawPixel(x, y, saucerCall) {
+  drawPixel(x, y, saucerCall = false) {
     let XYObjExtra = {x: 0, y: 0};
 
     if(!saucerCall) {
@@ -194,8 +194,11 @@ class Game {
       player.extraShipSetup();
       bullets.drawAndUpdate();
       asteroids.draw();
-      //this.drawPixel(saucer.ObjXYP1.x,saucer.ObjXYP1.y);
-      //this.drawPixel(saucer.ObjXYP2.x,saucer.ObjXYP2.y);
+      canvasButtonLeft.draw();
+      canvasButtonLeft.makeTriangles();
+      canvasButtonRight.draw();
+      canvasButtonThrust.draw();
+      //key.whatButton();
       if(!this.afterBigSaucer) {
         saucer.draw();
         saucer.update();
@@ -209,7 +212,7 @@ class Game {
       asteroids.draw();    
       this.gameOver();
       this.printScore();
-      if(key.keyCode === 13) {
+      if(buttons.keyCode === 13) {
         this.gameover = false;
         this.startNewGame();
       }
@@ -248,7 +251,7 @@ class Game {
         }
         this.beat1Next = false;
         this.valueBeat += 3;
-        console.log(this.beatCountDown);
+        //console.log(this.beatCountDown);
       } else {          
         beat2.loadSound().then(() => {
           beat2.play();
