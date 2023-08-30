@@ -194,10 +194,14 @@ class Game {
       player.extraShipSetup();
       bullets.drawAndUpdate();
       asteroids.draw();
+      canvasButtonLeft.calResizePos();
+      canvasButtonRight.calResizePos();
+      canvasButtonThrust.calResizePos();
       canvasButtonLeft.draw();
       canvasButtonLeft.makeTriangles();
       canvasButtonRight.draw();
       canvasButtonThrust.draw();
+      
       //key.whatButton();
       if(!this.afterBigSaucer) {
         saucer.draw();

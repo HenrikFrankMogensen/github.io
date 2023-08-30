@@ -10,6 +10,12 @@ class CanvasButton extends Game {
     this.ctx = ctx;
     this.canvas = canvas;
     this.button = button;
+    this.xResized = 0;
+    this.yResized = 0;
+    this.rX = this.x;
+    this.rY = this.y;
+    this.scaleFactorX = 0;
+    this.scaleFactorY = 0;
   }
 
   draw() {
@@ -28,22 +34,35 @@ class CanvasButton extends Game {
       y: event.clientY - rect.top
     };
   }
+
+  //const canvasW = canvas.getBoundingClientRect().width;
+  //const canvasH = canvas.getBoundingClientRect().height;
+
+  calResizePos() {
+    this.xResized = this.rX;
+    this.yResized = this.rY;
+    this.scaleFactorX = c.getBoundingClientRect().width / 800;
+    this.scaleFactorY = c.getBoundingClientRect().height / 600;
+    this.xResized = this.xResized * this.scaleFactorX;
+    this.yResized = this.yResized * this.scaleFactorY;
+    
+    console.log(this.xResized);
+  }
+
   isInsideButton() {
     //let result = false;
     if(this.button === 'left') {
-      return Math.sqrt(Math.abs(this.mouseX-this.x)*Math.abs(this.mouseX-this.x) + Math.abs(this.mouseY-this.y+5)*Math.abs(this.mouseY-this.y+5)) < 30;
+      return Math.sqrt(Math.abs(this.mouseX-this.xResized)*Math.abs(this.mouseX-this.xResized) + Math.abs(this.mouseY-this.yResized+5)*Math.abs(this.mouseY-this.yResized+5)) < 30;
     }
     if(this.button === 'thrust') {
-      return Math.sqrt(Math.abs(this.mouseX-this.x+5)*Math.abs(this.mouseX-this.x+5) + Math.abs(this.mouseY-this.y)*Math.abs(this.mouseY-this.y)) < 30;
+      return Math.sqrt(Math.abs(this.mouseX-this.xResized+5)*Math.abs(this.mouseX-this.xResized+5) + Math.abs(this.mouseY-this.yResized)*Math.abs(this.mouseY-this.yResized)) < 30;
     }
     if(this.button === 'right') {
-      return Math.sqrt(Math.abs(this.mouseX-this.x-20)*Math.abs(this.mouseX-this.x-20) + Math.abs(this.mouseY-this.y+5)*Math.abs(this.mouseY-this.y+5)) < 30;
+      return Math.sqrt(Math.abs(this.mouseX-this.xResized-20)*Math.abs(this.mouseX-this.xResized-20) + Math.abs(this.mouseY-this.yResized+5)*Math.abs(this.mouseY-this.yResized+5)) < 30;
     }
     game.drawPixel(100, 100);
   }
-  //const canvasButtonLeft = new CanvasButton(100,505,20,10,ctx,c);
-  //const canvasButtonRight = new CanvasButton(680,505,20,10,ctx,c);
-  //const canvasButtonThrust = new CanvasButton(375,520,10,20,ctx,c);
+  
   makeTriangles() {
     this.ctx.beginPath();
     this.ctx.moveTo(80, 510);

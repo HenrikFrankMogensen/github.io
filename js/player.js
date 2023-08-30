@@ -61,7 +61,7 @@ class Player extends Game {
     buttons.keyCode = buttons.whatKey();
     //key.keyCode = key.whatButton();
 
-    console.log(buttons.keyCode);
+    //console.log(buttons.keyCode);
   }
 
   addELSpacePressed() {
