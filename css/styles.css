@@ -4,7 +4,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  scale: 0.5;
 }
 .no-border {
   border: none;
@@ -12,12 +11,8 @@ body {
   border-width: 0px;
   border-color: white;
 }
-#left-button-js {
-  border: none;
-}
-#button-container {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#canvas-js {
+  margin: 20px;
+  max-width: 100%;
+  max-height: 100%;
 }
