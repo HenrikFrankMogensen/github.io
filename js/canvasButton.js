@@ -46,7 +46,7 @@ class CanvasButton extends Game {
     this.xResized = this.xResized * this.scaleFactorX;
     this.yResized = this.yResized * this.scaleFactorY;
     
-    console.log(this.xResized);
+    //console.log(this.xResized);
   }
 
   isInsideButton() {
