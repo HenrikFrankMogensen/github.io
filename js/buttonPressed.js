@@ -10,7 +10,7 @@ class ButtonPressed extends Game {
   whatKey() {
     if(!this.addListenerActive) {
       this.addListenerActive = true;
-      c.addEventListener('mousedown', (e) => {
+      c.addEventListener('touchstart', e => {
         let mousePos = canvasButtonLeft.getMousePos(c,e);
         canvasButtonLeft.mouseX = mousePos.x;
         canvasButtonLeft.mouseY = mousePos.y;
@@ -19,7 +19,7 @@ class ButtonPressed extends Game {
           this.keyCode = 37;
         }
       });
-      c.addEventListener('mouseup', (e) => {
+      c.addEventListener('touchend', e => {
         let mousePos = canvasButtonLeft.getMousePos(c,e);
         canvasButtonLeft.mouseX = mousePos.x;
         canvasButtonLeft.mouseY = mousePos.y;
