@@ -29,6 +29,7 @@ class CanvasButton extends Game {
   getMousePos(canvas, event) {
     let rect = canvas.getBoundingClientRect();
     //console.log(rect);
+    //console.log(event);
     return {
       x: event.clientX - rect.left,
       y: event.clientY - rect.top

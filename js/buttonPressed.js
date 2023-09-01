@@ -5,18 +5,21 @@ class ButtonPressed extends Game {
     this.keyCode = 0;
     this.spacePressed = false;
     this.repeatTimeout; 
+    this.touchPosX = 0;
+    this.touchPosY = 0;
   }
 
   whatKey() {
     if(!this.addListenerActive) {
       this.addListenerActive = true;
-      c.addEventListener('touchend', e => {
+      c.addEventListener('touchstart', e => {
+        this.touchPosX = e.changedTouches[0].pageY;
+        this.touchPosY = e.changedTouches[0].pageX;
         e.preventDefault();
         let mousePos = canvasButtonLeft.getMousePos(c,e);
-        canvasButtonLeft.mouseX = mousePos.x;
-        canvasButtonLeft.mouseY = mousePos.y;
+        canvasButtonLeft.mouseX = this.touchPosX;
+        canvasButtonLeft.mouseY = this.touchPosY;
       
-        console.log(e);
         if(canvasButtonLeft.isInsideButton()) {
           this.keyCode = 37;
         }
