@@ -30,6 +30,7 @@ const canvasButtonRight = new CanvasButton(680,505,20,10,ctx,c,'right');
 const canvasButtonThrust = new CanvasButton(385,510,10,20,ctx,c,'thrust');
 const test = new CanvasButton(680,450,20,10,ctx,c,'right');
 let buttons = new ButtonPressed();
+let button = new Buttons();
 
 document.addEventListener("DOMContentLoaded", function() {
   function gameLoop() {   

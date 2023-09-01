@@ -18,15 +18,15 @@ class Player extends Game {
 
   update() {
     if(this.on) {
-      if(buttons.keyCode === 37) {
+      if(button.keyCode === 37) {
         this.angle -= 0.1;
       }
-      if(buttons.keyCode === 39) {
+      if(button.keyCode === 39) {
         this.angle += 0.1;
       }
       //console.log(this.player.angle);
       // Thrust
-      if(buttons.keyCode === 38) {
+      if(button.keyCode === 38) {
         // ACCELERATION changes VELOCITY (with respect to time)
         this.dx += Math.sin(this.angle) * 2 * 0.2;
         this.dy += -Math.cos(this.angle) * 2 * 0.2;
@@ -39,7 +39,7 @@ class Player extends Game {
         }
         
       }
-      if(buttons.keyCode === 0) {
+      if(button.keyCode === 0) {
         if(this.thrustStopTick) {
           thrust.stop();
           this.thrustStopTick = false;
@@ -58,7 +58,7 @@ class Player extends Game {
   }
   
   keyPressUpdate() {
-    buttons.keyCode = buttons.whatKey();
+    //button.keyCode = buttons.whatKey();
     //key.keyCode = key.whatButton();
 
     //console.log(buttons.keyCode);
@@ -160,7 +160,7 @@ class Player extends Game {
       this.vec2p1.y = vecTFC[4][1];
       game.drawLine(this.vec2p0, this.vec2p1);
 
-      if(buttons.keyCode === 38) {
+      if(button.keyCode === 38) {
         this.vec2p0.x = vecTFC[5][0];
         this.vec2p0.y = vecTFC[5][1];
         this.vec2p1.x = vecTFC[6][0];

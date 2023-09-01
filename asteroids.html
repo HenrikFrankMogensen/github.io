@@ -11,7 +11,10 @@
   <div>
     <canvas width="800" height="600" id="canvas-js" color="0x000000"></canvas>
     <br><br>
-    <button id="play" >Play Sound ok</button>
+    <button id="play" >Play Sound</button>
+    <button id="btn-left">Left</button>
+    <button id="btn-thrust">Thrust</button>
+    <button id="btn-right">Right</button>
   </div>
   <script>
     let play = document.getElementById('play');
@@ -22,6 +25,7 @@
     play.addEventListener('click', playSound);
   </script>
   <script src="js/game.js"></script>
+  <script src="js/buttons.js"></script>
   <script src="js/canvasButton.js"></script>
   <script src="js/saucer.js"></script>
   <script src="js/buttonPressed.js"></script>

@@ -12,19 +12,18 @@ class ButtonPressed extends Game {
   whatKey() {
     if(!this.addListenerActive) {
       this.addListenerActive = true;
-      c.addEventListener('touchstart', e => {
-        this.touchPosX = e.changedTouches[0].pageY;
-        this.touchPosY = e.changedTouches[0].pageX;
-        e.preventDefault();
-        let mousePos = canvasButtonLeft.getMousePos(c,e);
-        canvasButtonLeft.mouseX = this.touchPosX;
-        canvasButtonLeft.mouseY = this.touchPosY;
       
+      /*
+      c.addEventListener('mousedown', e => {
+        let mousePos = canvasButtonLeft.getMousePos(c,e);
+        canvasButtonLeft.mouseX = mousePos.x;
+        canvasButtonLeft.mouseY = mousePos.y;
+        
         if(canvasButtonLeft.isInsideButton()) {
-          this.keyCode = 37;
+          this.keyCode = 39;
         }
       });
-      /*
+      
       c.addEventListener('mouseup', e => {
         let mousePos = canvasButtonLeft.getMousePos(c,e);
         canvasButtonLeft.mouseX = mousePos.x;
@@ -34,7 +33,7 @@ class ButtonPressed extends Game {
           this.keyCode = 0;
         }
       });
-      */
+      
       c.addEventListener('mousedown', e => {
         let mousePos = canvasButtonRight.getMousePos(c,e);
         canvasButtonRight.mouseX = mousePos.x;
@@ -71,7 +70,7 @@ class ButtonPressed extends Game {
           this.keyCode = 0;
         }
       });
-      
+      */
       document.addEventListener('keydown', e => {
         this.keyCode = e.keyCode;
       });
