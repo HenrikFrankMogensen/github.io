@@ -10,7 +10,7 @@ class ButtonPressed extends Game {
   whatKey() {
     if(!this.addListenerActive) {
       this.addListenerActive = true;
-      c.addEventListener('touchstart', e => {
+      c.addEventListener('touchend', e => {
         e.preventDefault();
         let mousePos = canvasButtonLeft.getMousePos(c,e);
         canvasButtonLeft.mouseX = mousePos.x;
