@@ -80,7 +80,7 @@ class Player extends Game {
         
     });
     
-    c.addEventListener("mousedown", (event) => {
+    c.addEventListener("touchstart", (event) => {
       //console.log(key.keyCode);
       if (button.keyCode === 0) {// Forkert keyCode 0 i stedet for 32
         if (!this.spacePressed) {
@@ -103,7 +103,7 @@ class Player extends Game {
       }
     });
     
-    c.addEventListener("mouseup", (event) => {
+    c.addEventListener("touchend", (event) => {
       if (button.keyCode === 0) {
         this.spacePressed = false;
         
