@@ -23,15 +23,11 @@ class Buttons extends Game {
     this.buttonRight.addEventListener('mouseup', e => {
       this.keyCode = 0;
     });
-  }
-
-  getMousePos(canvas, event) {
-    let rect = canvas.getBoundingClientRect();
-    //console.log(rect);
-    //console.log(event);
-    return {
-      x: event.clientX - rect.left,
-      y: event.clientY - rect.top
-    };
+    document.addEventListener('keydown', e => {
+      this.keyCode = e.keyCode;
+    });
+    document.addEventListener('keyup', e => {
+      this.keyCode = 0;
+    });
   }
 }
