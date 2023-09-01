@@ -71,12 +71,14 @@ class ButtonPressed extends Game {
         }
       });
       */
+      /*
       document.addEventListener('keydown', e => {
         this.keyCode = e.keyCode;
       });
       document.addEventListener('keyup', e => {
         this.keyCode = 0;
       });
+      */      
     } 
     return this.keyCode;
   }
