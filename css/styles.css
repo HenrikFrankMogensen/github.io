@@ -1,5 +1,5 @@
 body {
-  touch-action: manipulation;
+  
   margin: 0;
   display: flex;
   justify-content: center;
@@ -21,11 +21,14 @@ body {
   margin-left: 20px;
 }
 #btn-left {
+  touch-action: manipulation;
   margin-left: 20px;
 }
 #btn-thrust {
+  touch-action: manipulation;
   margin-left: 20px;
 }
 #btn-right {
+  touch-action: manipulation;
   margin-left: 20px;
 }
