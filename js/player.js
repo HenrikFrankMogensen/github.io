@@ -82,7 +82,7 @@ class Player extends Game {
     
     document.addEventListener("mousedown", (event) => {
       //console.log(key.keyCode);
-      if (buttons.keyCode === 0) {// Forkert keyCode 0 i stedet for 32
+      if (button.keyCode === 0) {// Forkert keyCode 0 i stedet for 32
         if (!this.spacePressed) {
           // First press
           this.spacePressed = true;
@@ -104,7 +104,7 @@ class Player extends Game {
     });
     
     document.addEventListener("mouseup", (event) => {
-      if (buttons.keyCode === 0) {
+      if (button.keyCode === 0) {
         this.spacePressed = false;
         
         clearTimeout(this.repeatTimeout);
