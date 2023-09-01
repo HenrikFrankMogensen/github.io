@@ -12,22 +12,16 @@ body {
   border-color: white;
 }
 #canvas-js {
-  
   max-width: 100%;
   max-height: 100%;
 }
-#play {
-  margin-left: 20px;
-}
+
 #btn-left {
   touch-action: manipulation;
-  margin-left: 20px;
 }
 #btn-thrust {
   touch-action: manipulation;
-  margin-left: 20px;
 }
 #btn-right {
   touch-action: manipulation;
-  margin-left: 20px;
 }
