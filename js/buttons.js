@@ -5,22 +5,22 @@ class Buttons extends Game {
     this.buttonThrust = document.getElementById('btn-thrust');
     this.buttonRight = document.getElementById('btn-right');
     this.keyCode = 0;
-    this.buttonLeft.addEventListener('touchstart', e => {
+    this.buttonLeft.addEventListener('mousedown', e => {
       this.keyCode = 37;
     });
-    this.buttonLeft.addEventListener('touchend', e => {
+    this.buttonLeft.addEventListener('mouseup', e => {
       this.keyCode = 0;
     });
-    this.buttonThrust.addEventListener('touchstart', e => {
+    this.buttonThrust.addEventListener('mousedown', e => {
       this.keyCode = 38;
     });
-    this.buttonThrust.addEventListener('touchend', e => {
+    this.buttonThrust.addEventListener('mouseup', e => {
       this.keyCode = 0;
     });
-    this.buttonRight.addEventListener('touchstart', e => {
+    this.buttonRight.addEventListener('mousedown', e => {
       this.keyCode = 39;
     });
-    this.buttonRight.addEventListener('touchend', e => {
+    this.buttonRight.addEventListener('mouseup', e => {
       this.keyCode = 0;
     });
     document.addEventListener('keydown', e => {
