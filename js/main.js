@@ -26,7 +26,7 @@ const asteroids = new Asteroids();
 asteroids.makeVecModelAsteroids();
 asteroids.makeAsteroids();
 
-let canvasArea = new CanvasButton();
+//let canvasArea = new CanvasButton();
 
 let button = new Buttons();
 

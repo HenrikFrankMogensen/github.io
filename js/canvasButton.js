@@ -1,9 +1,9 @@
 class CanvasButton extends Game {
   constructor() {
     super();
-    this.activateLeft = new canvasBtnArea(100,500,100);
-    this.activateThrust = new canvasBtnArea(400,500,100);
-    this.activateRight = new canvasBtnArea(700,500,100);
+    //this.activateLeft = new canvasBtnArea(100,500,100);
+    //this.activateThrust = new canvasBtnArea(400,500,100);
+    //this.activateRight = new canvasBtnArea(700,500,100);
     console.log(this.activateLeft.y);
   }
 
