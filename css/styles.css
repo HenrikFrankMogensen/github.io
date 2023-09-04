@@ -15,7 +15,7 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-#button-container {
+#button-container, #button-container2 {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -40,7 +40,7 @@ body {
   text-align: center;
   align-items: center;
   margin: 10px;
-  width: 100%;
+  width: 25%;
   touch-action: manipulation;
 }
 #btn-text {

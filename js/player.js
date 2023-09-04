@@ -93,7 +93,7 @@ class Player extends Game {
       }
         
     });
-    
+    /*
     c.addEventListener("mousedown", (event) => {
       //console.log(key.keyCode);
       if (true) {// Forkert keyCode 0 i stedet for 32
@@ -108,7 +108,7 @@ class Player extends Game {
       }
       
     });
-    
+    */
     document.addEventListener("keyup", (event) => {
       if (event.key === " ") {
         this.spacePressed = false;
@@ -124,7 +124,7 @@ class Player extends Game {
         clearTimeout(this.repeatTimeout);
       }
     });
-    
+    /*
     c.addEventListener("mouseup", (event) => {
       if (true) {
         this.spacePressed = false;
@@ -132,7 +132,7 @@ class Player extends Game {
         clearTimeout(this.repeatTimeout);
       }
     });
-    
+    */
     function repeatAction() {
       if (this.spacePressed) {
         console.log("Space key held down and repeating action");

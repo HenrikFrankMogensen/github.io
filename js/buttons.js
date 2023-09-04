@@ -47,7 +47,7 @@ class Buttons extends Game {
           this.leftKeyDown = true;
           break;
         case "Enter":
-          this.returnKeyDown = true;
+          this.enterKeyDown = true;
           break;
       }
       console.log(this.upKeyDown, this.rightKeyDown, this.leftKeyDown);
