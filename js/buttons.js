@@ -4,6 +4,7 @@ class Buttons extends Game {
     this.upKeyDown = false;
     this.leftKeyDown = false;
     this.rightKeyDown = false;
+    this.enterKeyDown = false;
     this.buttonLeft = document.getElementById('btn-left');
     this.buttonThrust = document.getElementById('btn-thrust');
     this.buttonRight = document.getElementById('btn-right');
@@ -37,6 +38,9 @@ class Buttons extends Game {
         case "ArrowLeft":
           this.leftKeyDown = true;
           break;
+        case "Enter":
+          this.returnKeyDown = true;
+          break;
       }
       console.log(this.upKeyDown, this.rightKeyDown, this.leftKeyDown);
       //this.keyCode = e.keyCode;
@@ -52,6 +56,8 @@ class Buttons extends Game {
         case "ArrowLeft":
           this.leftKeyDown = false;
           break;
+        case "Enter":
+          this.enterKeyDown = false;
       }
       console.log(this.upKeyDown, this.rightKeyDown, this.leftKeyDown);
       //this.keyCode = 0;

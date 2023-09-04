@@ -220,7 +220,7 @@ class Game {
       asteroids.draw();    
       this.gameOver();
       this.printScore();
-      if(buttons.keyCode === 13) {
+      if(button.enterKeyDown) {
         this.gameover = false;
         this.startNewGame();
       }
