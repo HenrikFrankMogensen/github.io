@@ -17,11 +17,17 @@ body {
 }
 
 #btn-left {
+  margin-left: 110px;
+  padding: 30px;
   touch-action: manipulation;
 }
 #btn-thrust {
+  margin-left: 30px;
+  padding: 30px;
   touch-action: manipulation;
 }
 #btn-right {
+  margin-left: 30px;
+  padding: 30px;
   touch-action: manipulation;
 }
