@@ -137,6 +137,14 @@ class Game {
     this.ctx.fillText(this.nScore, 20, 35);
   }
 
+  isAsteroidsOnPlayer() {
+    asteroids.vecAsteroids.forEach((a) => {
+      if(game.isPointInsideCircle(a.x,a.y, 100, player.x, player.y)) {
+        return true;
+      }
+    });
+  }
+
   resetGame() {
     asteroids.vecAsteroids = [];
     bullets.vecBullets = [];
@@ -188,13 +196,16 @@ class Game {
   onUserUpdate() {
     if(!this.gameover) {
       this.updateBeat();
-      player.draw();
+      if(!this.isAsteroidsOnPlayer()) {
+        player.draw();
+      }
+      
       player.keyPressUpdate();
       player.update();
       player.extraShipSetup();
       bullets.drawAndUpdate();
       asteroids.draw();
-      
+    
       //key.whatButton();
       if(!this.afterBigSaucer) {
         saucer.draw();
