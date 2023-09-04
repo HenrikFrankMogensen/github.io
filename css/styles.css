@@ -32,6 +32,17 @@ body {
   width: 100%;
   touch-action: manipulation;
 }
+#btn-fire {
+  text-justify: center;
+  border-radius: 30px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  width: 100%;
+  touch-action: manipulation;
+}
 #btn-text {
   font-family: Verdana;
   position: relative;
@@ -39,6 +50,9 @@ body {
 }
 @media (min-width: 600px) {
   #btn-left, #btn-thrust, #btn-right {
+    display: none;
+  }
+  #btn-fire {
     display: none;
   }
 }

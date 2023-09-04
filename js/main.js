@@ -19,16 +19,13 @@ bangMedium.loadSound().then(() => {
 });
 let saucer = new Saucer(-50,100,0,0,6,false);
 let saucerLittle = new Saucer(-50,500,0,0,4,false);
+let button = new Buttons();
 let player = new Player(400, 300, 0, 0, 0, 0);
 player.addELSpacePressed();
 const bullets = new Bullets();
 const asteroids = new Asteroids();
 asteroids.makeVecModelAsteroids();
 asteroids.makeAsteroids();
-
-//let canvasArea = new CanvasButton();
-
-let button = new Buttons();
 
 document.addEventListener("DOMContentLoaded", function() {
   function gameLoop() {   

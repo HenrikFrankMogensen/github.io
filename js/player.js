@@ -79,6 +79,20 @@ class Player extends Game {
       }
         
     });
+
+    button.buttonFire.addEventListener("touchstart", (event) => {
+      if (true) {
+        if (!this.spacePressed) {
+          // First press
+          this.spacePressed = true;
+          
+          bullets.addBullets();
+          this.repeatTimeout = setTimeout(repeatAction, 500); // Adjust the interval as needed
+        }
+        event.preventDefault(); // Prevent scrolling due to space key
+      }
+        
+    });
     
     c.addEventListener("mousedown", (event) => {
       //console.log(key.keyCode);
@@ -97,6 +111,14 @@ class Player extends Game {
     
     document.addEventListener("keyup", (event) => {
       if (event.key === " ") {
+        this.spacePressed = false;
+        
+        clearTimeout(this.repeatTimeout);
+      }
+    });
+
+    button.buttonFire.addEventListener("touchend", (event) => {
+      if (true) {
         this.spacePressed = false;
         
         clearTimeout(this.repeatTimeout);

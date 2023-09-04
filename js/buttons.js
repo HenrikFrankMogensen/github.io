@@ -5,9 +5,11 @@ class Buttons extends Game {
     this.leftKeyDown = false;
     this.rightKeyDown = false;
     this.enterKeyDown = false;
+    this.fireBtnActive = false;
     this.buttonLeft = document.getElementById('btn-left');
     this.buttonThrust = document.getElementById('btn-thrust');
     this.buttonRight = document.getElementById('btn-right');
+    this.buttonFire = document.getElementById('btn-fire');
     this.keyCode = 0;
     this.buttonLeft.addEventListener('touchstart', e => {
       this.leftKeyDown = true;
@@ -26,6 +28,12 @@ class Buttons extends Game {
     });
     this.buttonRight.addEventListener('touchend', e => {
       this.rightKeyDown = false;
+    });
+    this.buttonFire.addEventListener('touchstart', e => {
+      this.fireBtnActive = true;
+    });
+    this.buttonFire.addEventListener('touchend', e => {
+      this.fireBtnActive = false;     
     });
     document.addEventListener('keydown', e => {
       switch(e.key) {
