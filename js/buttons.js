@@ -9,22 +9,22 @@ class Buttons extends Game {
     this.buttonRight = document.getElementById('btn-right');
     this.keyCode = 0;
     this.buttonLeft.addEventListener('touchstart', e => {
-      this.rightKeyDown = true;
-    });
-    this.buttonLeft.addEventListener('touchend', e => {
-      this.rightKeyDown = false;
-    });
-    this.buttonThrust.addEventListener('touchstart', e => {
       this.leftKeyDown = true;
     });
-    this.buttonThrust.addEventListener('touchend', e => {
+    this.buttonLeft.addEventListener('touchend', e => {
       this.leftKeyDown = false;
     });
-    this.buttonRight.addEventListener('touchstart', e => {
+    this.buttonThrust.addEventListener('touchstart', e => {
       this.upKeyDown = true;
     });
-    this.buttonRight.addEventListener('touchend', e => {
+    this.buttonThrust.addEventListener('touchend', e => {
       this.upKeyDown = false;
+    });
+    this.buttonRight.addEventListener('touchstart', e => {
+      this.rightKeyDown = true;
+    });
+    this.buttonRight.addEventListener('touchend', e => {
+      this.rightKeyDown = false;
     });
     document.addEventListener('keydown', e => {
       switch(e.key) {
