@@ -1,21 +1,10 @@
 class CanvasButton extends Game {
-  constructor(x, y, width, height, ctx, canvas, button) {
+  constructor() {
     super();
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
-    this.mouseX = 0;
-    this.mouseY = 0;
-    this.ctx = ctx;
-    this.canvas = canvas;
-    this.button = button;
-    this.xResized = 0;
-    this.yResized = 0;
-    this.rX = this.x;
-    this.rY = this.y;
-    this.scaleFactorX = 0;
-    this.scaleFactorY = 0;
+    this.activateLeft = new canvasBtnArea(100,500,100);
+    this.activateThrust = new canvasBtnArea(400,500,100);
+    this.activateRight = new canvasBtnArea(700,500,100);
+    console.log(this.activateLeft.y);
   }
 
   draw() {

@@ -26,8 +26,8 @@ const asteroids = new Asteroids();
 asteroids.makeVecModelAsteroids();
 asteroids.makeAsteroids();
 
-const test = new CanvasButton(680,450,20,10,ctx,c,'right');
-//let buttons = new ButtonPressed();
+let canvasArea = new CanvasButton();
+
 let button = new Buttons();
 
 document.addEventListener("DOMContentLoaded", function() {

@@ -1,6 +1,9 @@
 class Buttons extends Game {
   constructor() {
     super();
+    this.upKeyDown = false;
+    this.leftKeyDown = false;
+    this.rightKeyDown = false;
     this.buttonLeft = document.getElementById('btn-left');
     this.buttonThrust = document.getElementById('btn-thrust');
     this.buttonRight = document.getElementById('btn-right');
@@ -24,10 +27,34 @@ class Buttons extends Game {
       this.keyCode = 0;
     });
     document.addEventListener('keydown', e => {
-      this.keyCode = e.keyCode;
+      switch(e.key) {
+        case "ArrowUp":
+          this.upKeyDown = true;
+          break;
+        case "ArrowRight":
+          this.rightKeyDown = true;
+          break;
+        case "ArrowLeft":
+          this.leftKeyDown = true;
+          break;
+      }
+      console.log(this.upKeyDown, this.rightKeyDown, this.leftKeyDown);
+      //this.keyCode = e.keyCode;
     });
     document.addEventListener('keyup', e => {
-      this.keyCode = 0;
+      switch(e.key) {
+        case "ArrowUp":
+          this.upKeyDown = false;
+          break;
+        case "ArrowRight":
+          this.rightKeyDown = false;
+          break;
+        case "ArrowLeft":
+          this.leftKeyDown = false;
+          break;
+      }
+      console.log(this.upKeyDown, this.rightKeyDown, this.leftKeyDown);
+      //this.keyCode = 0;
     });
   }
 }
