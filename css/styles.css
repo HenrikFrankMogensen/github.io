@@ -37,4 +37,9 @@ body {
   position: relative;
   top: 30px;
 }
+@media (min-width: 600px) {
+  #btn-left, #btn-thrust, #btn-right {
+    display: none;
+  }
+}
 
