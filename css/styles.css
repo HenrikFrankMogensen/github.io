@@ -17,24 +17,24 @@ body {
 }
 #buttons {
   display: flex;
-  column-gap: 20px;
+  column-gap: 10px;
 }
 #btn-left {
   margin-left: 30px;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 30%;
   background-color: orange;
   touch-action: manipulation;
 }
 #btn-thrust {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 30%;
   background-color: green;
   touch-action: manipulation;
 }
 #btn-right {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 30%;
   background-color: grey;
   touch-action: manipulation;
 }
