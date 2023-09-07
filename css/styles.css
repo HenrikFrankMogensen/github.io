@@ -30,6 +30,9 @@ body {
   align-items: center;
   margin: 10px;
   width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   touch-action: manipulation;
 }
 #btn-fire {
