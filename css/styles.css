@@ -55,5 +55,8 @@ body {
   #btn-fire {
     display: none;
   }
+  #button-container, #button-container2 {
+    height: 10px;
+  }
 }
 
