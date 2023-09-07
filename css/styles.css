@@ -1,4 +1,5 @@
 body {
+  overflow: hidden;
   touch-action: manipulation;
   display: flex;
   justify-content: center;
