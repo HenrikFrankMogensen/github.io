@@ -12,6 +12,7 @@ class Buttons extends Game {
     this.buttonFire = document.getElementById('btn-fire');
     this.keyCode = 0;
     this.buttonLeft.addEventListener('touchstart', (e) => {
+      e.preventDefault();
       this.leftKeyDown = true;
     });
     this.buttonLeft.addEventListener('touchend', (e) => {
@@ -29,12 +30,14 @@ class Buttons extends Game {
     this.buttonRight.addEventListener('touchend', e => {
       this.rightKeyDown = false;
     });
+    /*
     this.buttonFire.addEventListener('touchstart', e => {
       this.fireBtnActive = true;
     });
     this.buttonFire.addEventListener('touchend', e => {
       this.fireBtnActive = false;     
     });
+    */
     document.addEventListener('keydown', e => {
       switch(e.key) {
         case "ArrowUp":
