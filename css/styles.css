@@ -4,6 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  resize: none;
 }
 .no-border {
   border: none;
