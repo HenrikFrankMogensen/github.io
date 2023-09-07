@@ -4,13 +4,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  resize: none;
-}
-.no-border {
-  border: none;
-  background: none;
-  border-width: 0px;
-  border-color: white;
 }
 #canvas-js {
   max-width: 100%;
@@ -48,6 +41,9 @@ body {
   align-items: center;
   margin: 10px;
   width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   touch-action: manipulation;
 }
 #btn-text {
