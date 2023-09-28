@@ -79,6 +79,7 @@ div2.style.left = '25px';
 document.body.appendChild(div2);
 
 camera.position.z = 7;
+camera.position.y = 0.5;
 
 function animate() {
 	requestAnimationFrame( animate );
