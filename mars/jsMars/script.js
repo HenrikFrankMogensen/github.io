@@ -73,7 +73,7 @@ div2.style.width = '400px';
 div2.style.height = '50px';
 div2.style.fontSize = '20px';
 div2.style.fontFamily = 'Verdana';
-div2.innerHTML = 'All software creation<br>FaceBook: Gratis Computer Hjælp<br>E-mail: hfmdata@pc.dk<br>Telephone: 2120 1058<br>Code ex: <a href="asteroids.html" id="link">Asteroids clone</a>';
+div2.innerHTML = 'All software creation<br>FaceBook: Gratis Computer Hjælp<br>E-mail: hfmdata@pc.dk<br>Telephone: 2120 1058<br>Code ex: <a href="../asteroids.html" id="link">Asteroids clone</a>';
 div2.style.top = '110px';
 div2.style.left = '50px';
 document.body.appendChild(div2);
