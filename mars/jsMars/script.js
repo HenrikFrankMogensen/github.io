@@ -63,7 +63,7 @@ div.style.fontSize = '50px';
 div.style.fontFamily = 'Verdana';
 div.innerHTML = 'HFM-Data';
 div.style.top = '50px';
-div.style.left = '50px';
+div.style.left = '25px';
 document.body.appendChild(div);
 
 const div2 = document.createElement('div');
@@ -75,7 +75,7 @@ div2.style.fontSize = '20px';
 div2.style.fontFamily = 'Verdana';
 div2.innerHTML = 'All software creation<br>FaceBook: Gratis Computer Hjælp<br>E-mail: hfmdata@pc.dk<br>Telephone: 2120 1058<br>Code ex: <a href="../asteroids.html" id="link">Asteroids clone</a>';
 div2.style.top = '110px';
-div2.style.left = '50px';
+div2.style.left = '25px';
 document.body.appendChild(div2);
 
 camera.position.z = 7;
