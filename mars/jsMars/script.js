@@ -24,7 +24,7 @@ const material = new THREE.MeshPhongMaterial({
 });
 
 const sphere = new THREE.Mesh( geometrySphere, material );
-sphere.position.y = -0.5
+sphere.position.y = -1
 scene.add( sphere );
 
 let controls = new OrbitControls(camera, renderer.domElement);
