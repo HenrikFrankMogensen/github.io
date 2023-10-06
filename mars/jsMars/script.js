@@ -24,7 +24,7 @@ const material = new THREE.MeshPhongMaterial({
 });
 
 const sphere = new THREE.Mesh( geometrySphere, material );
-
+sphere.position.y = -0.5
 scene.add( sphere );
 
 let controls = new OrbitControls(camera, renderer.domElement);
@@ -79,11 +79,9 @@ div2.style.left = '25px';
 document.body.appendChild(div2);
 
 camera.position.z = 7;
-camera.position.y = 0.5;
-
 function animate() {
 	requestAnimationFrame( animate );
-    sphere.rotation.y += 0.005;
+    sphere.rotation.y += 0.003;
   
     renderer.render( scene, camera );
   
